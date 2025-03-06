@@ -17,7 +17,7 @@ When the script is finished, flash to SD card with (for example):
     $ sync
 
 Xen will print messages to the UART.
-Log in with username `dornerworks` password `dornerworks`.
+Log in with username `jerrydai` password `abc123`.
 
 To install a graphical desktop, expand the rootfs partition, ensure that you have an internet connection, run the command `sudo apt install ubuntu-desktop`, and reboot.
 
