@@ -12,15 +12,15 @@ sudo apt install qemu-user-static
 
 # Download Ubuntu Base file system (https://wiki.ubuntu.com/Base)
 ROOTFSURL=http://cdimage.ubuntu.com/ubuntu-base/releases/${UBUNTUVERSION}/release/
-ROOTFS=ubuntu-base-${UBUNTUVERSION}-base-${ARCH}.tar.gz
+ROOTFS=ubuntu-base-${UBUNTUVERSION}-base-arm64.tar.gz
 if [ ! -s ${ROOTFS} ]; then
     curl -OLf ${ROOTFSURL}${ROOTFS}
 fi
 
 MNTRAMDISK=/mnt/ramdisk/
-MNTROOTFS=${MNTRAMDISK}qemu-${ARCH}-rootfs/
+MNTROOTFS=${MNTRAMDISK}qemu-arm64-rootfs/
 
-IMGFILE=ubuntu-base-${UBUNTUVERSION}-base-${ARCH}-prepped.tar.gz
+IMGFILE=ubuntu-base-${UBUNTUVERSION}-base-arm64-prepped.tar.gz
 
 if [ -s ${IMGFILE} ]; then
     ROOTFS=${IMGFILE}
